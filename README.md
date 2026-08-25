@@ -1,79 +1,34 @@
-# DownGo 3.2
+# DownGo Free (v3.2)
 
-Windows download manager with:
+A fast, lightweight open-source Windows download manager built with Python and PySide6, featuring an IDM-style desktop UI and local browser integration.
 
-- IDM-style desktop UI
-- System tray/background mode
-- Multi-connection HTTP/HTTPS downloads
-- Pause/resume/cancel
-- Speed and ETA
-- Download history
-- Windows startup option
-- Local browser bridge on `127.0.0.1:8765`
-- Chrome/Edge Manifest V3 download interception
-- Browser download is cancelled only after DownGo accepts the URL
-- Better filename detection from Content-Disposition and URL
-- **Pro: Custom Themes** — including Aurora Glass, a frosted/glassmorphism
-  theme with translucent panels and soft gradients
-- **Pro: Custom Background** — set your own background image behind the
-  UI, with a one-click "↺ Default" reset back to the theme's normal look
-- Soft, adaptive window — the sidebar eases itself narrower on smaller
-  windows and back out again, instead of snapping abruptly
+---
 
-## Custom Themes & Background (Pro)
+## Features
 
-Use the theme dropdown (top toolbar) to switch looks, including the
-glassmorphism-style **Aurora Glass** theme. Click **🖼️ Background** to
-pick your own image to show behind the UI, and **↺ Default** to remove
-it and go back to the theme's default look. Both the selected theme and
-background are remembered the next time you open DownGo.
+- **IDM-Style Desktop UI:** Clean, modern interface designed for ease of use.
+- **System Tray / Background Mode:** Runs quietly in the system tray so your downloads continue uninterrupted.
+- **Multi-Connection Downloads:** Supports concurrent connections for faster HTTP/HTTPS downloads.
+- **Full Control:** Pause, resume, and cancel downloads anytime.
+- **Real-Time Analytics:** Live tracking of download speed, progress percentage, and estimated time of arrival (ETA).
+- **Download History:** Automatically saves and restores your queue across sessions.
+- **Windows Startup Option:** Option to launch DownGo automatically with Windows.
+- **Local Browser Bridge:** Local server running on `127.0.0.1:8765` for seamless browser communication.
+- **Chrome/Edge Manifest V3 Support:** Intercepts browser downloads and routes them directly to DownGo.
+- **Smart Filename Detection:** Accurately detects filenames using `Content-Disposition` headers and URL parsing.
 
-These are gated behind an active Pro license, same as the app's other
-Pro controls.
+---
 
-## Run
+## Requirements
 
-```bat
-python -m pip install -r requirements.txt
-python main.py
-```
+- Python 3.10 or higher
+- Windows 10/11
 
-## Build EXE
+---
 
-Put `icon.ico` in the project root and run:
+## Getting Started & Running Locally
 
-```bat
-build_exe.bat
-```
-
-## Browser extension
-
-Start DownGo first, then load `browser_extension` as an unpacked
-extension in Chrome or Edge.
-
-The extension talks only to the local DownGo bridge.
-
-This project handles ordinary HTTP/HTTPS downloads. It does not bypass DRM,
-authentication, paywalls, signed access controls, or other restrictions.
-
-
-## Professional Windows Installer
-
-This project includes `DownGo-Setup.iss` for Inno Setup.
-
-1. Install Inno Setup 6 on Windows.
-2. Run `build_installer.bat`.
-3. The result will be:
-   `installer\DownGo-Setup-v3.2.0.exe`
-
-The installer:
-- Installs DownGo under Program Files
-- Creates Start Menu shortcut
-- Optionally creates Desktop shortcut
-- Optionally starts DownGo with Windows
-- Includes the browser extension files
-- Uses the DownGo icon
-- Provides normal Windows uninstall support
-
-Important: the browser extension still needs to be loaded/published separately. A desktop installer cannot silently install a Chrome/Edge Web Store extension.
-
+1. Clone or download this repository.
+2. Install the required dependencies:
+   ```bat
+   python -m pip install -r requirements.txt
