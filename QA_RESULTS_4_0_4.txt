@@ -1,0 +1,44 @@
+DownGo 4.0.4 QA RESULTS
+========================
+
+Static compilation:
+PASS - app.py
+PASS - downloader.py
+PASS - speedtest.py
+PASS - license_manager.py
+PASS - bridge.py
+PASS - updater.py
+PASS - main.py
+PASS - QA_FILE_TYPES_4_0_4.py
+
+Deterministic local HTTP download tests:
+PASS - PDF
+PASS - MP3
+PASS - MP4
+PASS - ZIP
+PASS - JPG
+PASS - PNG
+PASS - TXT
+PASS - Range requests
+PASS - Content-Range validation
+PASS - SHA-256 verification
+PASS - server-provided filenames
+
+Local speed-test engine tests:
+PASS - ping
+PASS - download throughput
+PASS - upload throughput
+
+Store identity checks:
+PASS - Package Identity Name
+PASS - Publisher
+PASS - PublisherDisplayName
+PASS - MSIX version 4.0.4.0
+PASS - Store build updater marker
+
+Gumroad:
+PASS - configured Product ID
+PASS - purchase URL
+
+Note:
+This environment does not contain PySide6 or Windows WACK, so the native Windows GUI and WACK cannot be executed here. Final Windows validation must be run on a Windows 10/11 machine before Store submission.
