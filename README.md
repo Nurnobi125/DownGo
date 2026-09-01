@@ -1,60 +1,82 @@
-# DownGo Free (v3.2)
-
-A fast, lightweight open-source Windows download manager built with Python and PySide6, featuring an IDM-style desktop UI and local browser integration.
-
----
+# DownGo — Fast & Lightweight Windows Download Manager
 
 <p align="center">
   <img src="icon.ico" width="120" height="120" alt="DownGo Logo">
 </p>
 
-<h1 align="center">DownGo v3.2</h1>
+<h1 align="center">DownGo 4.0.7</h1>
 
 <p align="center">
-  <b>A fast, lightweight Windows download manager built with Python and PySide6, featuring an IDM-style desktop UI and seamless browser integration.</b>
+  <b>A fast, reliable and lightweight Windows download manager with multi-thread acceleration, pause & resume, browser integration, security scanning, speed testing and Lite Mode.</b>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.10%2B-blue?style=flat-square&logo=python" alt="Python Version">
+  <img src="https://img.shields.io/badge/version-4.0.7-blue?style=flat-square" alt="Version">
+  <img src="https://img.shields.io/badge/Python-3.11%2B-blue?style=flat-square&logo=python" alt="Python">
+  <img src="https://img.shields.io/badge/PySide6-6.x-green?style=flat-square" alt="PySide6">
   <img src="https://img.shields.io/badge/Platform-Windows%2010%2F11-lightgrey?style=flat-square&logo=windows" alt="Windows">
-  <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="MIT License">
+  <img src="https://img.shields.io/badge/Status-Active%20Development-success?style=flat-square" alt="Status">
+</p>
+
+<p align="center">
+  <a href="#features">Features</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#lite-mode">Lite Mode</a> •
+  <a href="#security">Security</a> •
+  <a href="#testing">Testing</a> •
+  <a href="#contributing">Contributing</a>
 </p>
 
 ---
 
-## 📸 Interface Preview
+## 📖 About
 
-<p align="center">
-  <img src="Screenshot (717).png" alt="DownGo UI Screenshot" width="100%">
-</p>
+**DownGo** is a modern Windows download manager built with **Python and PySide6**.
+
+It is designed to provide fast downloads without sacrificing reliability or system performance.
+
+DownGo supports multi-connection acceleration when the server supports HTTP Range requests, while automatically falling back to a normal single-connection download when necessary.
+
+The application also includes pause/resume, automatic retry, browser integration, download history, system-tray operation, a built-in speed tester, security scanning and a dedicated Lite Mode for low-end PCs.
 
 ---
 
 ## ✨ Features
 
-- **IDM-Style Desktop UI:** Clean, modern, dark-themed user interface designed for high performance and ease of use.
-- **System Tray / Background Mode:** Runs quietly in the system tray so your downloads continue uninterrupted.
-- **Multi-Connection Downloads:** Supports concurrent threads/connections to maximize download speeds.
-- **Full Control:** Pause, resume, cancel, and refresh expired download links effortlessly.
-- **Real-Time Analytics:** Live tracking of download speed, exact progress percentage, and estimated time of arrival (ETA).
-- **Download History & Queue:** Automatically saves and restores your active queue across sessions.
-- **Windows Startup Option:** Built-in option to launch DownGo automatically with Windows.
-- **Local Browser Bridge:** Local background server running on `127.0.0.1:8765` for lightning-fast browser communication.
-- **Chrome/Edge Manifest V3 Support:** Intercepts browser downloads and routes them directly into DownGo.
-- **Smart Filename Detection:** Accurately detects filenames using `Content-Disposition` headers and URL parsing.
+### ⚡ Fast Multi-Connection Downloads
 
----
+- Multi-thread download acceleration
+- HTTP Range request support
+- Automatic `206 Partial Content` validation
+- Automatic single-connection fallback
+- Configurable connection count
+- Real-time download speed
+- Thread/connection monitoring
+- Large-file support
 
-## 🛠️ Requirements
+### 📡 Live Download Monitor
 
-- Python 3.10 or higher
-- Windows 10/11
+Monitor active downloads directly from the application.
 
----
+Shows:
 
-## 🚀 Getting Started & Running Locally
+- Current file
+- Download percentage
+- Current speed
+- ETA
+- Active threads
+- Connection mode
+- Download status
 
-1. Clone or download this repository.
-2. Install the required dependencies:
-   ```bat
-   python -m pip install -r requirements.txt
+Example:
+
+```text
+📡 LIVE DOWNLOAD MONITOR
+
+Ubuntu.iso
+████████████████░░░░  78%
+
+Speed:       8.4 MB/s
+Threads:     16 / 16
+Mode:        Multi-Range
+Status:      Downloading
